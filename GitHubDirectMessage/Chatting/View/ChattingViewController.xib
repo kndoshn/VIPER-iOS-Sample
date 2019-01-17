@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChattingViewController" customModule="GitHubDirectMessage" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomLayoutConstraint" destination="ZTW-hp-dpo" id="1CT-ma-WfR"/>
+                <outlet property="chattingInputView" destination="j53-Vw-SpB" id="phw-b6-Pkv"/>
+                <outlet property="tableView" destination="PST-HS-Usr" id="A2Y-Xt-4DV"/>
+                <outlet property="view" destination="iN0-l3-epB" id="TOF-2t-Vz8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PST-HS-Usr">
+                    <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="76B-Pm-3eb"/>
+                        <outlet property="delegate" destination="-1" id="u4l-2v-VpH"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j53-Vw-SpB" customClass="ChattingInputView" customModule="GitHubDirectMessage" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" name="gray09"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Z5W-Eq-kCM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="PST-HS-Usr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9CQ-4c-zNh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PST-HS-Usr" secondAttribute="trailing" id="O1N-Zk-Xea"/>
+                <constraint firstItem="PST-HS-Usr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Shy-6B-vQU"/>
+                <constraint firstItem="j53-Vw-SpB" firstAttribute="top" secondItem="PST-HS-Usr" secondAttribute="bottom" id="ULl-un-wyY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j53-Vw-SpB" secondAttribute="bottom" id="ZTW-hp-dpo"/>
+                <constraint firstItem="j53-Vw-SpB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cce-p6-wwN"/>
+                <constraint firstItem="j53-Vw-SpB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vW6-J5-xaf"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="gray09">
+            <color red="0.89999997615814209" green="0.89999997615814209" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
